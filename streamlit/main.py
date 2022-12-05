@@ -45,20 +45,20 @@ add_selectbox = st.sidebar.selectbox(
 # )
 
 
-max_age = df['age'].max()
-min_age = df['age'].min()
+max_age = int(df['age'].max())
+min_age = int(df['age'].min())
 
 age_choose = st.sidebar.slider('Choose age range', min_age, max_age, (min_age, max_age))
-df = df[(df['age'] <= int(age_choose[1])) & (df['age'] >= int(age_choose[0]))]
+df = df[(df['age'] <= age_choose[1]) & (df['age'] >= age_choose[0])]
 
-max_balance = df['balance'].max()
-min_balance = df['balance'].min()
+max_balance = int(df['balance'].max())
+min_balance = int(df['balance'].min())
 
 balance_choose = st.sidebar.slider('Choose balance range', min_balance, max_balance, (min_balance, max_balance))
 df = df[(df['balance'] <= balance_choose[1]) & (df['balance'] >= balance_choose[0])]
 
-max_duration = df['duration'].max()
-min_duration = df['duration'].min()
+max_duration = int(df['duration'].max())
+min_duration = int(df['duration'].min())
 
 duration_choose = st.sidebar.slider('Choose duration range', min_duration, max_duration, (min_duration, max_duration))
 df = df[(df['duration'] <= duration_choose[1]) & (df['duration'] >= duration_choose[0])]
