@@ -1,5 +1,7 @@
 ## Information about the dataset in the project
 
+
+
 ## Distribution chart
 - The age range of the dataset with the highest number of people is bettween 30 and 37 years old
 - Management, blue collar and technicien is the most job of the dataset
