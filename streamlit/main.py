@@ -49,7 +49,7 @@ max_age = df['age'].max()
 min_age = df['age'].min()
 
 age_choose = st.sidebar.slider('Choose age range', min_age, max_age, (min_age, max_age))
-df = df[(df['age'] <= age_choose[1]) & (df['age'] >= age_choose[0])]
+df = df[(df['age'] <= int(age_choose[1])) & (df['age'] >= int(age_choose[0]))]
 
 max_balance = df['balance'].max()
 min_balance = df['balance'].min()
