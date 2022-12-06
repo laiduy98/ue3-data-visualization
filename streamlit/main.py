@@ -17,7 +17,7 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 df = pd.read_csv('data/bank.csv')
 
 # Control sidebar
-st.sidebar.image("images/logo-univ-2.png", use_column_width=True)
+st.sidebar.image("../images/logo-univ-2.png", use_column_width=True)
 
 add_selectbox = st.sidebar.selectbox(
     "Please select a option for the distribution chart",
@@ -158,8 +158,8 @@ fig_3 = px.scatter(df, x="balance", y="duration", color="marital",
 fig_3.update_layout(
     title={
          'text': "Relation ship bettween marital status, duration and balance."},
-    xaxis_title="Duration",
-    yaxis_title=" Balance",
+    xaxis_title="Balance",
+    yaxis_title=" Duration",
     legend_title="Marital Status"
 )
 
